@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjbn0h7emdse4"]
+
+[ext_resource type="PackedScene" uid="uid://bh2oei8cil2j2" path="res://entity/character/player/player.tscn" id="1_p5fey"]
+[ext_resource type="PackedScene" uid="uid://carkqxl8dfhpk" path="res://entity/puzzle/mutiara.tscn" id="2_bbd8t"]
+
+[node name="map1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578.75, 322.25)
+scale = Vector2(1158.5, 645.5)
+
+[node name="Player" parent="." instance=ExtResource("1_p5fey")]
+position = Vector2(93, 134)
+
+[node name="Node2D" parent="." instance=ExtResource("2_bbd8t")]
+position = Vector2(159, 134)
