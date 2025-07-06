@@ -46,9 +46,14 @@ public partial class Map_2 : Node2D
 	private int IndexBucket { get; set; }
 	private Node2D bridgeNode { get; set; }
 	private bool waitForText = false;
+	private string[] ClueText = [
+								"Clue Buat Box 1",
+								"Clue Buat Box 2",
+								"Clue Buat Box 3"
+								];
 	// Use this Dictionary to point if the order of item in the boxes are correct
 	// Key or the correct order
-	private int[] CorrectOrderIndexItems = [2,1,0]; // SO the correct order are gergaji, pisau ukir, dan kapak
+	private int[] CorrectOrderIndexItems = [2, 1, 0]; // SO the correct order are gergaji, pisau ukir, dan kapak
 	// Data
 	private Dictionary<int, int> kIBucketvIItem = new Dictionary<int, int>(){ // Key is index of bucket and value is index of items
 																		{0, -1},
@@ -130,7 +135,7 @@ public partial class Map_2 : Node2D
 						// 	if (items[i].itemCondition == ItemConditions.Taken)
 						// 	{
 						IsFilled = false;
-						string begginingText = "Some Clue";
+						string begginingText = ClueText[IndexBucket];
 						string choiceText = "Pilih barang yang ingin dimasukkan";
 						bridgeNode.Call("ShowDialog", begginingText, choiceText, isStored[0], isStored[1], isStored[2]);
 						waitForText = true;
