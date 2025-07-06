@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 BgMusik="*res://music/bg_musik.tscn"
 Bridgedialogic="*res://bridge/bridgedialogic.tscn"
+PlayerMove="*res://player_move.gd"
 
 [dialogic]
 
@@ -30,7 +31,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "bucket1": "res://entity/puzzle/bucket1.dtl",
 "puzzle_1": "res://dialog/puzzle_1.dtl",
-"puzzle_1-cahaya": "res://dialog/puzzle_1-cahaya.dtl"
+"puzzle_1-cahaya": "res://dialog/puzzle_1-cahaya.dtl",
+"puzzle_1-opening": "res://dialog/puzzle_1-opening.dtl"
 }
 variables={
 "beggining_text": "",

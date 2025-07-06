@@ -1,4 +1,6 @@
+do PlayerMove.set_player_cant_move()
 if {is_mutiara_dimakan} == true:
 	HANA: Lihat itu di ujung Pantai! Ada Cahaya putih!
 	KURO: mari kita dekati!
 	HANA: LAH ITU KAN JALAN KITA BARUSAN
+do PlayerMove.set_player_can_move()

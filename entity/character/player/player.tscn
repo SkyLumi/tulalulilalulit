@@ -190,6 +190,7 @@ height = 19.5328
 y_sort_enabled = true
 scale = Vector2(1.00568, 1)
 script = ExtResource("1_r71ml")
+Speed = 800.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
@@ -206,4 +207,4 @@ scale = Vector2(0.372419, -0.50907)
 shape = SubResource("CapsuleShape2D_r71ml")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)

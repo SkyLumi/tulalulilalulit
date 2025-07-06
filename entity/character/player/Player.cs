@@ -3,6 +3,7 @@ using Godot;
 public partial class Player : CharacterBody2D
 {
 	[Export] public float Speed = 100f;
+	[Export] public bool canMove = true;
 	
 	private AnimatedSprite2D animatedSprite;
 	private Vector2 lastDirection = Vector2.Zero;
@@ -27,19 +28,26 @@ public partial class Player : CharacterBody2D
 	
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector2 inputDirection = GetInputDirection();
-		
-		// Set velocity
-		Velocity = inputDirection * Speed;
-		
-		// Update movement state
-		isMoving = inputDirection != Vector2.Zero;
-		
-		// Update animation
-		UpdateAnimation(inputDirection);
-		
-		// Move player
-		MoveAndSlide();
+		if (canMove) 
+		{
+			Vector2 inputDirection = GetInputDirection();
+			
+			// Set velocity
+			Velocity = inputDirection * Speed;
+			
+			// Update movement state
+			isMoving = inputDirection != Vector2.Zero;
+			
+			// Update animation
+			UpdateAnimation(inputDirection);
+			
+			// Move player
+			MoveAndSlide();
+		}
+		else
+		{
+			animatedSprite.Play("idle");
+		}
 	}
 	
 	private Vector2 GetInputDirection()
