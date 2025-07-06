@@ -2,7 +2,14 @@ extends Node2D
 
 signal dialog_finished(result: String)
 
-func ShowDialog(begginingText: String, choiceText: String, isAxeTaken: bool, isCarveTaken: bool, isSawTaken: bool):
+func ShowDialog(
+	begginingText: String, 
+	choiceText: String, 
+	isAxeTaken: bool, 
+	isCarveTaken: bool, 
+	isSawTaken: bool, 
+	):
+
 	Dialogic.VAR["beggining_text"] = begginingText
 	Dialogic.VAR["choice_text"] = choiceText
 	Dialogic.VAR["is_axe_taken"] = isAxeTaken

@@ -18,19 +18,30 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+BgMusik="*res://music/bg_musik.tscn"
+Bridgedialogic="*res://bridge/bridgedialogic.tscn"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"HANA": "res://dialog/HANA.dch",
+"KURO": "res://dialog/KURO.dch"
+}
 directories/dtl_directory={
+<<<<<<< HEAD
 "IntroMap2": "res://Assets/map2/IntroMap2.dtl",
 "bucket1": "res://entity/puzzle/bucket1.dtl"
+=======
+"bucket1": "res://entity/puzzle/bucket1.dtl",
+"puzzle_1": "res://dialog/puzzle_1.dtl"
+>>>>>>> 0249d4f6683adabf2bccc04e2b47a13f7ecec327
 }
 variables={
 "beggining_text": "",
 "choice_text": "",
 "is_axe_taken": false,
 "is_carve_taken": false,
+"is_mutiara_dimakan": false,
 "is_saw_taken": false
 }
 layout/style_list=[]

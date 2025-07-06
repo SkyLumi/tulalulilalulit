@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgqwylv8r131y"]
+
+[ext_resource type="AudioStream" uid="uid://mu3jiqcsfttq" path="res://Assets/musik/puzzle.mp3" id="1_8ynvj"]
+
+[node name="BgMusik" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_8ynvj")
+volume_db = -5.0
+autoplay = true

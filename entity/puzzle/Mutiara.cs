@@ -5,7 +5,7 @@ public partial class Mutiara : CharacterBody2D
 	[Export] public float PushForce = 250.0f;
 	[Export] public float Friction = 0.82f;
 	[Export] public float MaxSpeed = 150.0f;
-	[Export] public float PushDistance = 25.0f;
+	[Export] public float PushDistance = 15.0f;
 	
 	private Vector2 pushVelocity = Vector2.Zero;
 	private CharacterBody2D player;
@@ -80,22 +80,22 @@ public partial class Mutiara : CharacterBody2D
 			Vector2 inputDirection = Vector2.Zero;
 			
 			// Deteksi input dan arah dorongan
-			if (Input.IsActionPressed("ui_right") && pushDirection.X > 0.5f)
+			if (Input.IsActionPressed("ui_right") && pushDirection.X > 0.0f)
 			{
 				canPush = true;
 				inputDirection = Vector2.Right;
 			}
-			else if (Input.IsActionPressed("ui_left") && pushDirection.X < -0.5f)
+			else if (Input.IsActionPressed("ui_left") && pushDirection.X < -0.0f)
 			{
 				canPush = true;
 				inputDirection = Vector2.Left;
 			}
-			else if (Input.IsActionPressed("ui_up") && pushDirection.Y < -0.5f)
+			else if (Input.IsActionPressed("ui_up") && pushDirection.Y < -0.0f)
 			{
 				canPush = true;
 				inputDirection = Vector2.Up;
 			}
-			else if (Input.IsActionPressed("ui_down") && pushDirection.Y > 0.5f)
+			else if (Input.IsActionPressed("ui_down") && pushDirection.Y > 0.0f)
 			{
 				canPush = true;
 				inputDirection = Vector2.Down;
@@ -107,21 +107,8 @@ public partial class Mutiara : CharacterBody2D
 				
 				// Apply push
 				pushVelocity += pushDirection * PushForce * (float)delta;
-				
-				// Visual feedback
-				Modulate = Colors.Yellow;
-				
+								
 			}
-			else
-			{
-				// Reset visual
-				Modulate = Colors.White;
-			}
-		}
-		else
-		{
-			// Reset visual
-			Modulate = Colors.White;
 		}
 	}
 }

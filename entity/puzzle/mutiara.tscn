@@ -5,39 +5,39 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bu30m"]
 atlas = ExtResource("1_umrqd")
-region = Rect2(0, 0, 16, 16)
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yr5mm"]
 atlas = ExtResource("1_umrqd")
-region = Rect2(16, 0, 16, 16)
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8q3q7"]
 atlas = ExtResource("1_umrqd")
-region = Rect2(32, 0, 16, 16)
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vd0pn"]
 atlas = ExtResource("1_umrqd")
-region = Rect2(48, 0, 16, 16)
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jt0np"]
 atlas = ExtResource("1_umrqd")
-region = Rect2(64, 0, 16, 16)
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ytp5f"]
 atlas = ExtResource("1_umrqd")
-region = Rect2(80, 0, 16, 16)
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w58s8"]
 atlas = ExtResource("1_umrqd")
-region = Rect2(96, 0, 16, 16)
+region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ikdyf"]
 atlas = ExtResource("1_umrqd")
-region = Rect2(112, 0, 16, 16)
+region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_68gfx"]
 atlas = ExtResource("1_umrqd")
-region = Rect2(128, 0, 16, 16)
+region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ecku"]
 animations = [{
@@ -75,19 +75,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bu30m"]
-size = Vector2(6.65642, 7.4948)
+size = Vector2(4.65949, 7.4948)
 
 [node name="Mutiara" type="CharacterBody2D"]
 y_sort_enabled = true
 scale = Vector2(2, 2)
+collision_mask = 2
 script = ExtResource("1_bu30m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.5, -3)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_3ecku")
 autoplay = "default"
-frame_progress = 0.0936268
+frame_progress = 0.0877671
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3.01)
+position = Vector2(-1.78814e-07, 0)
 scale = Vector2(1.50231, 0.800555)
 shape = SubResource("RectangleShape2D_bu30m")
