@@ -20,6 +20,7 @@ func _isMutiaraDimakan(isMutiaraDimakan: bool):
 func _isCahayaPuzzle():
 	Dialogic.start('puzzle_1-cahaya')
 
+<<<<<<< HEAD
 func _map03Dial01():
 	Dialogic.start('map03-01')
 
@@ -39,5 +40,28 @@ func _map03Dial05():
 func _map03Dial06():
 	Dialogic.start('map03-06')
 
+=======
+<<<<<<< HEAD
+>>>>>>> 9e3f8b6 (map3)
 func _isOpening():
 	Dialogic.start('puzzle_1-opening')
+=======
+func _map03Dial01():
+	Dialogic.start('map03-01')
+
+func _map03Dial02():
+	Dialogic.start('map03-02')
+
+func _map03Dial03():
+	Dialogic.start('map03-03')
+
+func _map03Dial04():
+	Dialogic.start('map03-04')
+
+func _map03Dial05():
+	Dialogic.start('map03-05')
+	Dialogic.connect("timeline_ended", Callable(self, "_map03Dial06"), CONNECT_ONE_SHOT)
+
+func _map03Dial06():
+	Dialogic.start('map03-06')
+>>>>>>> ad32d53 (map3)
