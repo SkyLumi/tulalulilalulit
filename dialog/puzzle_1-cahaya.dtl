@@ -1,0 +1,7 @@
+do PlayerMove.set_player_cant_move()
+HANA: Lah ini mawar?
+[signal arg="bunga"]
+[wait_input]
+HANA: bjir, kukira bakal lebih lama nyarinya.
+do PlayerMove.set_player_can_move()
+[signal arg="selesai"]
