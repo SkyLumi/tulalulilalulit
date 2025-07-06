@@ -20,15 +20,23 @@ config/icon="res://icon.svg"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 BgMusik="*res://music/bg_musik.tscn"
 Bridgedialogic="*res://bridge/bridgedialogic.tscn"
+SpawnManager="*res://maps/map3/SpawnManager.cs"
 
 [dialogic]
 
 directories/dch_directory={
 "HANA": "res://dialog/HANA.dch",
-"KURO": "res://dialog/KURO.dch"
+"KURO": "res://dialog/KURO.dch",
+"WAN": "res://dialog/WAN.dch"
 }
 directories/dtl_directory={
 "bucket1": "res://entity/puzzle/bucket1.dtl",
+"map03-01": "res://dialog/map03-01.dtl",
+"map03-02": "res://dialog/map03-02.dtl",
+"map03-03": "res://dialog/map03-03.dtl",
+"map03-04": "res://dialog/map03-04.dtl",
+"map03-05": "res://dialog/map03-05.dtl",
+"map03-06": "res://dialog/map03-06.dtl",
 "puzzle_1": "res://dialog/puzzle_1.dtl",
 "puzzle_1-cahaya": "res://dialog/puzzle_1-cahaya.dtl"
 }
@@ -42,6 +50,27 @@ variables={
 }
 layout/style_list=[]
 layout/default_style="Default"
+SpawnManager="*res://maps/map3/SpawnManager.cs"
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+audio/max_channels=4.0
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
 
 [dotnet]
 
