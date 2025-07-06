@@ -29,7 +29,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "bucket1": "res://entity/puzzle/bucket1.dtl",
-"puzzle_1": "res://dialog/puzzle_1.dtl"
+"puzzle_1": "res://dialog/puzzle_1.dtl",
+"puzzle_1-cahaya": "res://dialog/puzzle_1-cahaya.dtl"
 }
 variables={
 "beggining_text": "",

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cjbn0h7emdse4"]
+[gd_scene load_steps=15 format=4 uid="uid://cjbn0h7emdse4"]
 
 [ext_resource type="Texture2D" uid="uid://d0ijt6xbltej0" path="res://Assets/map1/beach-asset-1.png" id="1_5565n"]
 [ext_resource type="PackedScene" uid="uid://bh2oei8cil2j2" path="res://entity/character/player/player.tscn" id="1_p5fey"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cxt7gley1c654" path="res://Assets/map1/barrier_map1_001.png" id="3_063jp"]
 [ext_resource type="Texture2D" uid="uid://culve6bgcpn33" path="res://Assets/map1/barrier_map1_002.png" id="4_jkpbc"]
 [ext_resource type="PackedScene" uid="uid://c4ddsy0k6fror" path="res://entity/puzzle/kerang.tscn" id="7_fwcsg"]
+[ext_resource type="PackedScene" uid="uid://dfu5mphgme06c" path="res://entity/puzzle/cahaya.tscn" id="8_063jp"]
+[ext_resource type="Script" uid="uid://dsyynulx41yx8" path="res://entity/puzzle/Cahaya.cs" id="9_jkpbc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5565n"]
 texture = ExtResource("1_5565n")
@@ -239,3 +241,7 @@ position = Vector2(-258, -69)
 [node name="Kerang" parent="." instance=ExtResource("7_fwcsg")]
 z_index = -1
 position = Vector2(274, 143)
+
+[node name="Cahaya" parent="." instance=ExtResource("8_063jp")]
+position = Vector2(-622, -62)
+script = ExtResource("9_jkpbc")
