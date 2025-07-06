@@ -146,7 +146,7 @@ public partial class Map_2 : Node2D
 					{
 						IsFilled = true;
 						string begginingText = "Kotak sudah terisi";
-						string choiceText = "Pilih tindakan yang ingin dilakukan";
+						string choiceText = "Pilih barang yang ingin diambil";
 						bool[] isItemInBucket = [false, false, false];
 						// Rubah untuk deteksi item pada indeks mana yang ada pada bucket
 						isItemInBucket[kIBucketvIItem[IndexBucket]] = true;
