@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgrjvbpu7wsnw"]
+
+[ext_resource type="Texture2D" uid="uid://jxjnyofxd660" path="res://Assets/map2/png_or_gif/carve_tool.png" id="1_o0tfb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8nd2"]
+size = Vector2(4.94975, 16.9706)
+
+[node name="carveTool" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_o0tfb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.25, -0.25)
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_y8nd2")

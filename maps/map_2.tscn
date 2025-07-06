@@ -1,18 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://rtmq7pwvijb2"]
+[gd_scene load_steps=9 format=3 uid="uid://rtmq7pwvijb2"]
 
 [ext_resource type="Script" uid="uid://da3m6qnqdre88" path="res://maps/Map_2.cs" id="1_st3ta"]
 [ext_resource type="PackedScene" uid="uid://bh2oei8cil2j2" path="res://entity/character/player/player.tscn" id="4_kccvk"]
 [ext_resource type="PackedScene" uid="uid://uf0ni8uny6r6" path="res://Assets/map2/Bucket.tscn" id="4_qumfa"]
-[ext_resource type="PackedScene" uid="uid://cl7idvm70tcoy" path="res://maps/Map2/map-2.tscn" id="4_st3ta"]
-[ext_resource type="PackedScene" uid="uid://b25v8pi5of7wr" path="res://entity/puzzle/dummy_chest.tscn" id="5_kccvk"]
+[ext_resource type="PackedScene" uid="uid://cl7idvm70tcoy" path="res://maps/tilemap2.tscn" id="4_st3ta"]
+[ext_resource type="PackedScene" uid="uid://d4bghvor53ncf" path="res://entity/puzzle/axe_node.tscn" id="6_qumfa"]
+[ext_resource type="PackedScene" uid="uid://dgrjvbpu7wsnw" path="res://entity/puzzle/carve_tool.tscn" id="6_xjrid"]
+[ext_resource type="PackedScene" uid="uid://gqofvi3mp5bl" path="res://entity/puzzle/saw_node.tscn" id="7_4t0kj"]
+[ext_resource type="PackedScene" uid="uid://0yr2m6dcdif5" path="res://entity/puzzle/text_choice_dialogic.tscn" id="8_4t0kj"]
 
 [node name="map_2" type="Node2D"]
 script = ExtResource("1_st3ta")
 PlayerPath = NodePath("Player")
 LabelPath = NodePath("Label")
-Item1Path = NodePath("DummyChest")
-Item2Path = NodePath("DummyChest2")
-Item3Path = NodePath("DummyChest3")
+AxePath = NodePath("axeNode")
+CarvePath = NodePath("carveTool")
+SawPath = NodePath("sawNode")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -21,7 +24,6 @@ build_mode = 1
 polygon = PackedVector2Array(316, 47, 316, 14, 4, 14, 4, 115, 316, 115, 316, 81, 316, 115, 4, 115, 4, 14, 316, 14)
 
 [node name="Tilemap2" parent="." instance=ExtResource("4_st3ta")]
-position = Vector2(-1, 0)
 
 [node name="Bucket" parent="." groups=["Buckets"] instance=ExtResource("4_qumfa")]
 position = Vector2(751, 269)
@@ -33,44 +35,46 @@ position = Vector2(800, 271)
 position = Vector2(853, 269)
 
 [node name="Label" type="Label" parent="." groups=["Labels"]]
-offset_left = 675.0
-offset_top = 283.0
-offset_right = 766.0
-offset_bottom = 306.0
-text = "Ini Bucket 1"
+offset_left = 682.0
+offset_top = 239.0
+offset_right = 850.0
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 12
+text = "Tekan 'Enter' untuk Interaksi"
 
 [node name="Label2" type="Label" parent="." groups=["Labels"]]
-offset_left = 767.0
-offset_top = 307.0
-offset_right = 858.0
-offset_bottom = 330.0
-text = "Ini Bucket 2"
+offset_left = 731.0
+offset_top = 239.0
+offset_right = 899.0
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 12
+text = "Tekan 'Enter' untuk Interaksi"
 
 [node name="Label3" type="Label" parent="." groups=["Labels"]]
-offset_left = 855.0
-offset_top = 289.0
-offset_right = 942.0
-offset_bottom = 312.0
-text = "IniBucket 3"
+offset_left = 784.0
+offset_top = 238.0
+offset_right = 952.0
+offset_bottom = 261.0
+theme_override_font_sizes/font_size = 12
+text = "Tekan 'Enter' untuk Interaksi"
 
 [node name="Player" parent="." instance=ExtResource("4_kccvk")]
 position = Vector2(193, 328)
-scale = Vector2(0.4, 0.4)
+scale = Vector2(1, 1)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D2" type="Camera2D" parent="Player"]
 limit_left = 0
 limit_top = 0
 limit_right = 1184
 limit_bottom = 895
 
-[node name="DummyChest" parent="." instance=ExtResource("5_kccvk")]
-position = Vector2(363, 662)
-scale = Vector2(2, 2)
+[node name="axeNode" parent="." instance=ExtResource("6_qumfa")]
+position = Vector2(488, 354)
 
-[node name="DummyChest2" parent="." instance=ExtResource("5_kccvk")]
-position = Vector2(401, 278)
-scale = Vector2(2, 2)
+[node name="carveTool" parent="." instance=ExtResource("6_xjrid")]
+position = Vector2(647, 212)
 
-[node name="DummyChest3" parent="." instance=ExtResource("5_kccvk")]
-position = Vector2(555, 136)
-scale = Vector2(2, 2)
+[node name="sawNode" parent="." instance=ExtResource("7_4t0kj")]
+position = Vector2(575, 138)
+
+[node name="TextChoice" parent="." instance=ExtResource("8_4t0kj")]

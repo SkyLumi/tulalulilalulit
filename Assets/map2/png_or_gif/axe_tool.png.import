@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpi5oxsvna6w8"
-path="res://.godot/imported/big trees-2.png.png-2d42aafd19476b5817818a7942ce73f6.ctex"
+uid="uid://bkq12fdfow4i4"
+path="res://.godot/imported/axe_tool.png-68eec7af9b9c06d0de4aa94e5487e5f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/map2/big trees-2.png.png"
-dest_files=["res://.godot/imported/big trees-2.png.png-2d42aafd19476b5817818a7942ce73f6.ctex"]
+source_file="res://Assets/map2/png_or_gif/axe_tool.png"
+dest_files=["res://.godot/imported/axe_tool.png-68eec7af9b9c06d0de4aa94e5487e5f8.ctex"]
 
 [params]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://gqofvi3mp5bl"]
+
+[ext_resource type="Texture2D" uid="uid://f1bgnwyy2r7a" path="res://Assets/map2/png_or_gif/saw_tool.png" id="1_612vn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7lf6"]
+size = Vector2(4.99254, 20)
+
+[node name="sawNode" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_612vn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.246202, -0.206588)
+rotation = 0.698132
+shape = SubResource("RectangleShape2D_d7lf6")

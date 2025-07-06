@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvxch0id4vomy"
-path="res://.godot/imported/DummyChest.png-1ab601838f46b957ba3f951d202a6fa3.ctex"
+uid="uid://f1bgnwyy2r7a"
+path="res://.godot/imported/saw_tool.png-9442f1ff979ae5b86d4723a062fc046d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/map2/DummyChest.png"
-dest_files=["res://.godot/imported/DummyChest.png-1ab601838f46b957ba3f951d202a6fa3.ctex"]
+source_file="res://Assets/map2/png_or_gif/saw_tool.png"
+dest_files=["res://.godot/imported/saw_tool.png-9442f1ff979ae5b86d4723a062fc046d.ctex"]
 
 [params]
 

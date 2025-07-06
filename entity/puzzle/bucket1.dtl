@@ -1,0 +1,10 @@
+{beggining_text}
+{choice_text}
+- Kapak | [if {is_axe_taken} == true]
+	[signal arg="taruh kapak"]
+- Pisau Ukir | [if {is_carve_taken} == true]
+	[signal arg="taruh pisau ukir"]
+- Gergaji | [if {is_saw_taken} == true]
+	[signal arg="taruh gergaji"]
+- Tidak Ada
+	[signal arg="tidak ada yang ditaruh"]

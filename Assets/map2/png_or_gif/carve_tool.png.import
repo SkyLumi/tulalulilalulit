@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt17333mlxi2u"
-path="res://.godot/imported/DummyBasicCharakterSpritesheet.png-30ad946cde05ad81ee566b8e8c3d4895.ctex"
+uid="uid://jxjnyofxd660"
+path="res://.godot/imported/carve_tool.png-8c6c166ced664786b245bcdba43751bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/map2/DummyBasicCharakterSpritesheet.png"
-dest_files=["res://.godot/imported/DummyBasicCharakterSpritesheet.png-30ad946cde05ad81ee566b8e8c3d4895.ctex"]
+source_file="res://Assets/map2/png_or_gif/carve_tool.png"
+dest_files=["res://.godot/imported/carve_tool.png-8c6c166ced664786b245bcdba43751bf.ctex"]
 
 [params]
 
