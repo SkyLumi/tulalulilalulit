@@ -20,8 +20,15 @@ config/icon="res://icon.svg"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 BgMusik="*res://music/bg_musik.tscn"
 Bridgedialogic="*res://bridge/bridgedialogic.tscn"
+<<<<<<< HEAD
 SpawnManager="*res://maps/map3/SpawnManager.cs"
+=======
+<<<<<<< HEAD
+>>>>>>> 9e3f8b6 (map3)
 PlayerMove="*res://player_move.gd"
+=======
+SpawnManager="*res://maps/map3/SpawnManager.cs"
+>>>>>>> ad32d53 (map3)
 
 
 [dialogic]
