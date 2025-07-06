@@ -75,19 +75,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bu30m"]
-size = Vector2(6.65642, 7.4948)
+size = Vector2(4.65949, 7.4948)
 
 [node name="Mutiara" type="CharacterBody2D"]
 y_sort_enabled = true
 scale = Vector2(2, 2)
+collision_mask = 2
 script = ExtResource("1_bu30m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -3.01)
 sprite_frames = SubResource("SpriteFrames_3ecku")
 autoplay = "default"
-frame_progress = 0.0936268
+frame_progress = 0.298106
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3.01)
+position = Vector2(-1.78814e-07, 0)
 scale = Vector2(1.50231, 0.800555)
 shape = SubResource("RectangleShape2D_bu30m")

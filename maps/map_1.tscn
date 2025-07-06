@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=4 uid="uid://cjbn0h7emdse4"]
+[gd_scene load_steps=13 format=4 uid="uid://cjbn0h7emdse4"]
 
-[ext_resource type="Texture2D" uid="uid://baln82v8w35uw" path="res://Assets/map1/beach-asset-1.png" id="1_5565n"]
+[ext_resource type="Texture2D" uid="uid://d0ijt6xbltej0" path="res://Assets/map1/beach-asset-1.png" id="1_5565n"]
 [ext_resource type="PackedScene" uid="uid://bh2oei8cil2j2" path="res://entity/character/player/player.tscn" id="1_p5fey"]
 [ext_resource type="PackedScene" uid="uid://carkqxl8dfhpk" path="res://entity/puzzle/mutiara.tscn" id="2_bbd8t"]
 [ext_resource type="Texture2D" uid="uid://bgtu5qvmjlbsi" path="res://Assets/map1/beach-asset-2.png" id="2_fwcsg"]
 [ext_resource type="Texture2D" uid="uid://cxt7gley1c654" path="res://Assets/map1/barrier_map1_001.png" id="3_063jp"]
 [ext_resource type="Texture2D" uid="uid://culve6bgcpn33" path="res://Assets/map1/barrier_map1_002.png" id="4_jkpbc"]
+[ext_resource type="PackedScene" uid="uid://c4ddsy0k6fror" path="res://entity/puzzle/kerang.tscn" id="7_fwcsg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5565n"]
 texture = ExtResource("1_5565n")
@@ -194,7 +195,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_gdq6d"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_5565n")
 sources/1 = SubResource("TileSetAtlasSource_fwcsg")
 sources/2 = SubResource("TileSetAtlasSource_063jp")
@@ -230,7 +231,10 @@ tile_map_data = PackedByteArray("AAD5////AAAAAAEAAAD5/wAAAAAAAAEAAAD5/wEAAAAAAAE
 tile_set = SubResource("TileSet_gdq6d")
 
 [node name="Player" parent="." instance=ExtResource("1_p5fey")]
-position = Vector2(-386, -66)
+position = Vector2(-386, -55)
 
 [node name="Mutiara" parent="." instance=ExtResource("2_bbd8t")]
 position = Vector2(-258, -69)
+
+[node name="Kerang" parent="." instance=ExtResource("7_fwcsg")]
+position = Vector2(274, 143)
