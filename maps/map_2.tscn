@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=20 format=4 uid="uid://rtmq7pwvijb2"]
+
 
 [ext_resource type="Script" uid="uid://da3m6qnqdre88" path="res://maps/Map_2.cs" id="1_st3ta"]
 [ext_resource type="PackedScene" uid="uid://bh2oei8cil2j2" path="res://entity/character/player/player.tscn" id="4_kccvk"]
@@ -8,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dgrjvbpu7wsnw" path="res://entity/puzzle/carve_tool.tscn" id="6_xjrid"]
 [ext_resource type="PackedScene" uid="uid://gqofvi3mp5bl" path="res://entity/puzzle/saw_node.tscn" id="7_4t0kj"]
 [ext_resource type="PackedScene" uid="uid://0yr2m6dcdif5" path="res://entity/puzzle/text_choice_dialogic.tscn" id="8_4t0kj"]
+
 [ext_resource type="Texture2D" uid="uid://xodi1s11h588" path="res://Assets/map2/big trees-1.png (1).png" id="9_s2iqm"]
 [ext_resource type="Texture2D" uid="uid://t86g10ro4pkh" path="res://Assets/map2/big trees-2.png.png" id="10_hj1iv"]
 [ext_resource type="PackedScene" uid="uid://cv8bc1cuvp576" path="res://bridge/Map2/GetAxeBridge.tscn" id="11_hj1iv"]
@@ -211,6 +214,7 @@ position = Vector2(1070, 424)
 
 [node name="TextChoice" parent="." instance=ExtResource("8_4t0kj")]
 
+
 [node name="Pohon" type="TileMapLayer" parent="."]
 z_index = 1
 position = Vector2(380, 730)
@@ -240,3 +244,5 @@ shape = SubResource("CapsuleShape2D_hj1iv")
 [node name="IntroMap2" parent="." instance=ExtResource("12_2ag24")]
 
 [node name="BrideEndMap2" parent="." instance=ExtResource("13_xlxwa")]
+
+

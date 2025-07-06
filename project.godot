@@ -20,13 +20,16 @@ config/icon="res://icon.svg"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 BgMusik="*res://music/bg_musik.tscn"
 Bridgedialogic="*res://bridge/bridgedialogic.tscn"
+SpawnManager="*res://maps/map3/SpawnManager.cs"
 PlayerMove="*res://player_move.gd"
+
 
 [dialogic]
 
 directories/dch_directory={
 "HANA": "res://dialog/HANA.dch",
-"KURO": "res://dialog/KURO.dch"
+"KURO": "res://dialog/KURO.dch",
+"WAN": "res://dialog/WAN.dch"
 }
 directories/dtl_directory={
 "CG1Map2": "res://Assets/map2/CG1Map2.dtl",
@@ -38,6 +41,13 @@ directories/dtl_directory={
 "MonologHana": "res://Assets/map2/MonologHana.dtl",
 "TransBlack": "res://Assets/map2/TransBlack.dtl",
 "bucket1": "res://entity/puzzle/bucket1.dtl",
+"map03-01": "res://dialog/map03-01.dtl",
+"map03-02": "res://dialog/map03-02.dtl",
+"map03-03": "res://dialog/map03-03.dtl",
+"map03-04": "res://dialog/map03-04.dtl",
+"map03-05": "res://dialog/map03-05.dtl",
+"map03-06": "res://dialog/map03-06.dtl",
+"map03-07": "res://CGI/map03-07.dtl",
 "puzzle_1": "res://dialog/puzzle_1.dtl",
 "puzzle_1-cahaya": "res://dialog/puzzle_1-cahaya.dtl",
 "puzzle_1-opening": "res://dialog/puzzle_1-opening.dtl"
@@ -51,6 +61,9 @@ variables={
 }
 layout/style_list=[]
 layout/default_style="Default"
+
+SpawnManager="*res://maps/map3/SpawnManager.cs"
+
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
