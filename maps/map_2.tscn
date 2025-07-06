@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://rtmq7pwvijb2"]
+[gd_scene load_steps=10 format=3 uid="uid://rtmq7pwvijb2"]
 
 [ext_resource type="Script" uid="uid://da3m6qnqdre88" path="res://maps/Map_2.cs" id="1_st3ta"]
 [ext_resource type="PackedScene" uid="uid://bh2oei8cil2j2" path="res://entity/character/player/player.tscn" id="4_kccvk"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dgrjvbpu7wsnw" path="res://entity/puzzle/carve_tool.tscn" id="6_xjrid"]
 [ext_resource type="PackedScene" uid="uid://gqofvi3mp5bl" path="res://entity/puzzle/saw_node.tscn" id="7_4t0kj"]
 [ext_resource type="PackedScene" uid="uid://0yr2m6dcdif5" path="res://entity/puzzle/text_choice_dialogic.tscn" id="8_4t0kj"]
+[ext_resource type="PackedScene" uid="uid://b5sid36pbxrvy" path="res://entity/character/ocheng/ocheng.tscn" id="9_qdl5i"]
 
 [node name="map_2" type="Node2D"]
 script = ExtResource("1_st3ta")
@@ -61,6 +62,7 @@ text = "Tekan 'Enter' untuk Interaksi"
 [node name="Player" parent="." instance=ExtResource("4_kccvk")]
 position = Vector2(192, 369)
 scale = Vector2(1, 1)
+Speed = 100.0
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 limit_left = 0
@@ -78,3 +80,6 @@ position = Vector2(647, 212)
 position = Vector2(575, 138)
 
 [node name="TextChoice" parent="." instance=ExtResource("8_4t0kj")]
+
+[node name="Ocheng" parent="." instance=ExtResource("9_qdl5i")]
+position = Vector2(175, 363)

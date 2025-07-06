@@ -15,6 +15,9 @@ public partial class Kerang : Node2D
 	{
 		if (body.IsInGroup("mutiara")) // atau body is Mutiara
 		{
+			var cahaya = GetNode<Node2D>("../Cahaya");
+			cahaya.Position = new Vector2(-622,-62);
+			
 			var dialogicBridge = GetNode("/root/Bridgedialogic");
 			dialogicBridge.Call("_isMutiaraDimakan", true);
 			buka.Hide();

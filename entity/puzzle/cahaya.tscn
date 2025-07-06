@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfu5mphgme06c"]
+[gd_scene load_steps=12 format=3 uid="uid://dfu5mphgme06c"]
 
 [ext_resource type="Texture2D" uid="uid://ycxomdwdm6cq" path="res://Assets/objek/bling_bling.png" id="1_jm77a"]
+[ext_resource type="Script" uid="uid://dsyynulx41yx8" path="res://entity/puzzle/Cahaya.cs" id="1_muxrh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nerd4"]
 atlas = ExtResource("1_jm77a")
@@ -62,7 +63,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_muxrh"]
 radius = 30.0666
 
-[node name="Cahaya" type="Node2D"]
+[node name="Cahaya" type="Node2D" node_paths=PackedStringArray("triggerArea")]
+script = ExtResource("1_muxrh")
+triggerArea = NodePath("Area2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5qwht")

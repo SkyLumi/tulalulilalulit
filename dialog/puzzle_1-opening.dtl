@@ -1,0 +1,4 @@
+do PlayerMove.set_player_cant_move()
+HANA: Woy, Mutiara ini besar banget! hampir sebadan
+KURO: Sepertinya Mutiara ini adalah kunci untuk menemukan mawar pertama yang kita cari
+do PlayerMove.set_player_can_move()

@@ -21,6 +21,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 BgMusik="*res://music/bg_musik.tscn"
 Bridgedialogic="*res://bridge/bridgedialogic.tscn"
 SpawnManager="*res://maps/map3/SpawnManager.cs"
+PlayerMove="*res://player_move.gd"
+
 
 [dialogic]
 
@@ -38,7 +40,8 @@ directories/dtl_directory={
 "map03-05": "res://dialog/map03-05.dtl",
 "map03-06": "res://dialog/map03-06.dtl",
 "puzzle_1": "res://dialog/puzzle_1.dtl",
-"puzzle_1-cahaya": "res://dialog/puzzle_1-cahaya.dtl"
+"puzzle_1-cahaya": "res://dialog/puzzle_1-cahaya.dtl",
+"puzzle_1-opening": "res://dialog/puzzle_1-opening.dtl"
 }
 variables={
 "beggining_text": "",
