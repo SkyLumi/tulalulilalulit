@@ -379,5 +379,6 @@ autoplay = "default"
 frame_progress = 0.718919
 
 [node name="Ocheng" parent="." instance=ExtResource("11_tiqm4")]
-position = Vector2(-320, -91)
+position = Vector2(-403, -60)
+collision_layer = 2
 PlayerPath = NodePath("../Player")
