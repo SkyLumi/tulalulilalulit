@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bx1vsio1g356q"]
+
+[ext_resource type="Texture2D" uid="uid://ktfnfx3shi5y" path="res://Assets/character/oceng/oceng_left_idle.png" id="1_c7ggu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5esst"]
+atlas = ExtResource("1_c7ggu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwwj5"]
+atlas = ExtResource("1_c7ggu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uare"]
+atlas = ExtResource("1_c7ggu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1bof"]
+atlas = ExtResource("1_c7ggu")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ae6f6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5esst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwwj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uare")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1bof")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj3oe"]
+size = Vector2(17.375, 15.5)
+
+[node name="Oceng" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -10)
+sprite_frames = SubResource("SpriteFrames_ae6f6")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_gj3oe")
