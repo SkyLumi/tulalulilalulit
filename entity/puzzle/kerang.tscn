@@ -5,20 +5,27 @@
 [ext_resource type="Texture2D" uid="uid://b4lxajujuv2me" path="res://Assets/map1/clam_closed.png" id="3_6tivq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gciwl"]
-radius = 39.3192
+radius = 6.0
 
-[node name="Kerang" type="Node2D"]
+[node name="Kerang" type="Node2D" node_paths=PackedStringArray("buka", "tutup", "triggerArea")]
 script = ExtResource("1_g5s6h")
+buka = NodePath("buka")
+tutup = NodePath("tutup")
+triggerArea = NodePath("Area2D")
 
 [node name="buka" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("1_mh30s")
 
 [node name="tutup" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("3_6tivq")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_gciwl")

@@ -59,7 +59,7 @@ theme_override_font_sizes/font_size = 12
 text = "Tekan 'Enter' untuk Interaksi"
 
 [node name="Player" parent="." instance=ExtResource("4_kccvk")]
-position = Vector2(193, 328)
+position = Vector2(192, 369)
 scale = Vector2(1, 1)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
