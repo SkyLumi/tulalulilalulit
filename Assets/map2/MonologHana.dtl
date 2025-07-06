@@ -1,0 +1,30 @@
+[background arg="res://Assets/map2/BlackTile.png" fade="0.0"]
+HANA: Sekali lagi, aku terbangun di Tengah kegelapan.
+HANA: Akan tetapi, sekarang tiada Kasur mawar yang aku terbangun dari.
+HANA: Di sekitarku aku bisa lihat serpihan tanah. Bagian dari dunia yang aku lewati tadi.
+HANA: ...
+HANA: …kosong…
+HANA: …Aku tidak ingin lanjut
+HANA: Aku hanya ingin berdiam disini…
+HANA: Mengapa dia tidak memiliki perasaan yang sama seperti diriku?
+HANA: Apakah benar dia sudah muak denganku?
+HANA: Aku emang egois, aku takut tertinggalkan, aku tidak mau ditinggalkan.
+HANA: Aku tidak mau berpikir…
+HANA: Tapi yang dia katakan benar.
+HANA: Aku terperangkap oleh masa laluku sendiri.
+- Berdiri
+	HANA: Iya, setidaknya sekali ini, aku akan dengarkan keinginanya.
+	[signal arg="ended"]
+- Diam Saja
+	HANA: Mungkin… aku bisa berdiam sebentar.
+	- Berdiri
+		HANA: Iya, setidaknya sekali ini, aku akan dengarkan keinginanya.
+		[signal arg="ended"]
+	- Diam
+		HANA: Tidak, aku harus mencoba mendengarkanya. Aku tidak bisa tetap egois seperti ini.
+		- Berdiri
+			HANA: Iya, setidaknya sekali ini, aku akan dengarkan keinginanya.
+			[signal arg="ended"]
+		- Berdiri
+			HANA: Iya, setidaknya sekali ini, aku akan dengarkan keinginanya.
+			[signal arg="ended"]

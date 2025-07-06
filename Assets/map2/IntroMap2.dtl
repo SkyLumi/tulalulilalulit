@@ -1,2 +1,13 @@
-[background fade="0.0"]
-<Empty Text Event>
+HANA: Sekarang kita di Hutan?
+KURO: Hutan ini sungguh gelap.
+HANA: Iya, tetapi mengapa hutan ini terasa sangat familiar? Seperti sebuah tempat Istimewa yang aku seharusnya tidak lupakan.
+HANA: (Tidak hanya itu, tapi baru ku sadari, terimakasih atas memori di Pantai itu. Dia memiliki suara yang sama dengan ia…)
+di Tengah perjalanan Hana berbincang dengan Kuro
+[wait time="1.5"]
+HANA: Omong-omong, kamu bagaimana bisa muncul disini Kuro? Aku tidak ingat pernag memelihara Kucing.
+KURO: Aku adalah manifestast dari salah satu harapanmu.
+HANA: Harapanku?
+KURO: Iya, pada suatu saat kamu telah berharap untuk sesuatu dengan sepenuh hatimu, dan akulah muncul di dunia ini.
+HANA: Emangnya aku berharap apa hingga kamu mucul disini?
+KURO: Aku sendiri tidak pernah diberi tahu.
+jump IntroMap2_2/

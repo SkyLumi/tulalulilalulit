@@ -1,0 +1,35 @@
+HANA: Ah, pohon ini…
+Pada batang terdapat ukiran bertuliskan "H & W"
+HANA: …
+[wait time="1.0" hide_text="false"]
+KURO: Mari Hana, mari kita pergi ke memori berikutnya.
+HANA: Sebentar, aku ingin bertanya, kamu sebenarnya siapa.
+KURO: Aku adalah pemandumu.
+HANA: Bukan, maksudku. *kamu* siapa.
+HANA: Aku ingat sekarang, harapan yang pernah aku buat. Mengapa suaramu sama denganya.
+HANA: Kamu tidak perlu mengatakan namamu, aku hanya ingin menentukan iya atau tidak.
+HANA: Apakah kamu, kekasihku yang kemarin meninggal?
+KURO: Iya, saat kau membuat harapan itu saat pemakamanku, jiwaku terasa seperti ditarik, dan saat aku tersadar, aku berada di dunia ini, dalam wujud yang kau lihat sekarang.
+KURO: Kamu tidak mengharapkan nyawaku beristirahat dengan tenang, sebaliknya kau menginginkanku untuk menghantui dirimu selama kamu hidup, agar aku selalu bisa berada bersamamu.
+KURO: Aku akan jujur saja, saat bouquet ini akhirnya terkumpulkan Kembali, bukan hanya kamu yang terlepaskan dari dunia ini, tapi juga diriku.
+HANA: Tapi mengapa? Bukankah ini keinginan kita? Untuk menjadi pasangan selama hidup?
+HANA: Mengapa kamu ingin melepaskanku segampang itu? aku terlalu mencintaimu, mengapa aku tak boleh bersamamu?
+HANA: Apakah kamu tidak mencintaiku lagi?
+KURO: Aku mencintaimu, tapi. Melihatmu terperangkap oleh masa lalu, aku merasa gagal sebagai pasanganmu, tidak dapat membantumu di waktu paling penting.
+KURO: Itu kenapa aku menerima harapanmu, dan menjadi pemandu dunia ini, untuk suatu hari dapat membantumu melewati masa lalu ini.
+HANA: Tidak! Aku tidak ingin meninggalkanmu lagi! Aku tidak peduli harus terperangkap di dunia ini selamanya! Asal aku bisa berbicara denganmu lagi!
+KURO: Sebentar! Jika emosimu naik seperti ini, dunia ini akan-
+Tanah di sekitar meretak, dan dari ujung tanah di bawah mereka berjatuhan ke kehampaan di bawah
+[background arg="res://Assets/map2/BlackTile.png" fade="0.0"]
+HANA: Apa yang terjadi?!
+KURO: Karena emosimu memuncak, dunia ini menjadi tidak stabil.
+KURO: Kita harus cepat pergi ke memori berikutnya.
+HANA: Tapi-
+KURO: Jika tidak kau akan terjebak di kegelapan selamanya!
+KURO: Tanpa masa depan, tanpa harapan, kau akan terjebak di kegelapan selama hidupmu!
+[background arg="res://Assets/map2/CG/Hesitate.png" fade="0.0"]
+Hana beragu-ragu sebelum lari ke pintu
+[background arg="res://Assets/map2/CG/Hesitated2.png" fade="0.0"]
+Sebelum Hana memegang gagang pintunya, kegelapan telah menghancurkan tanah dibawahnya, dan dia terjatuh ke bawah
+[wait time="1.5"]
+jump MonologHana/

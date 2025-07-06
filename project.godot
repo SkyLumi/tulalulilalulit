@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="tulalulilaillutliliut"
-run/main_scene="uid://dubfkpo8j75dg"
+run/main_scene="uid://rtmq7pwvijb2"
 config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -28,20 +28,22 @@ directories/dch_directory={
 "KURO": "res://dialog/KURO.dch"
 }
 directories/dtl_directory={
-<<<<<<< HEAD
+"CG1Map2": "res://Assets/map2/CG1Map2.dtl",
+"GetAxe": "res://Assets/map2/GetAxe.dtl",
+"GetCarving": "res://Assets/map2/EndOfMap2.dtl",
 "IntroMap2": "res://Assets/map2/IntroMap2.dtl",
-"bucket1": "res://entity/puzzle/bucket1.dtl"
-=======
+"IntroMap2_2": "res://Assets/map2/IntroMap2_2.dtl",
+"IntroToPuzzle": "res://Assets/map2/IntroToPuzzle.dtl",
+"MonologHana": "res://Assets/map2/MonologHana.dtl",
+"TransBlack": "res://Assets/map2/TransBlack.dtl",
 "bucket1": "res://entity/puzzle/bucket1.dtl",
 "puzzle_1": "res://dialog/puzzle_1.dtl"
->>>>>>> 0249d4f6683adabf2bccc04e2b47a13f7ecec327
 }
 variables={
 "beggining_text": "",
 "choice_text": "",
 "is_axe_taken": false,
 "is_carve_taken": false,
-"is_mutiara_dimakan": false,
 "is_saw_taken": false
 }
 layout/style_list=[]
