@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://rtmq7pwvijb2"]
+
+[ext_resource type="Script" uid="uid://da3m6qnqdre88" path="res://maps/Map_2.cs" id="1_st3ta"]
+[ext_resource type="PackedScene" uid="uid://bh2oei8cil2j2" path="res://entity/character/player/player.tscn" id="4_kccvk"]
+[ext_resource type="PackedScene" uid="uid://uf0ni8uny6r6" path="res://Assets/map2/Bucket.tscn" id="4_qumfa"]
+[ext_resource type="PackedScene" uid="uid://cl7idvm70tcoy" path="res://maps/Map2/map-2.tscn" id="4_st3ta"]
+[ext_resource type="PackedScene" uid="uid://b25v8pi5of7wr" path="res://entity/puzzle/dummy_chest.tscn" id="5_kccvk"]
+
+[node name="map_2" type="Node2D"]
+script = ExtResource("1_st3ta")
+PlayerPath = NodePath("Player")
+LabelPath = NodePath("Label")
+Item1Path = NodePath("DummyChest")
+Item2Path = NodePath("DummyChest2")
+Item3Path = NodePath("DummyChest3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(316, 47, 316, 14, 4, 14, 4, 115, 316, 115, 316, 81, 316, 115, 4, 115, 4, 14, 316, 14)
+
+[node name="Tilemap2" parent="." instance=ExtResource("4_st3ta")]
+position = Vector2(-1, 0)
+
+[node name="Bucket" parent="." groups=["Buckets"] instance=ExtResource("4_qumfa")]
+position = Vector2(751, 269)
+
+[node name="Bucket2" parent="." groups=["Buckets"] instance=ExtResource("4_qumfa")]
+position = Vector2(800, 271)
+
+[node name="Bucket3" parent="." groups=["Buckets"] instance=ExtResource("4_qumfa")]
+position = Vector2(853, 269)
+
+[node name="Label" type="Label" parent="." groups=["Labels"]]
+offset_left = 675.0
+offset_top = 283.0
+offset_right = 766.0
+offset_bottom = 306.0
+text = "Ini Bucket 1"
+
+[node name="Label2" type="Label" parent="." groups=["Labels"]]
+offset_left = 767.0
+offset_top = 307.0
+offset_right = 858.0
+offset_bottom = 330.0
+text = "Ini Bucket 2"
+
+[node name="Label3" type="Label" parent="." groups=["Labels"]]
+offset_left = 855.0
+offset_top = 289.0
+offset_right = 942.0
+offset_bottom = 312.0
+text = "IniBucket 3"
+
+[node name="Player" parent="." instance=ExtResource("4_kccvk")]
+position = Vector2(193, 328)
+scale = Vector2(0.4, 0.4)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = 0
+limit_top = 0
+limit_right = 1184
+limit_bottom = 895
+
+[node name="DummyChest" parent="." instance=ExtResource("5_kccvk")]
+position = Vector2(363, 662)
+scale = Vector2(2, 2)
+
+[node name="DummyChest2" parent="." instance=ExtResource("5_kccvk")]
+position = Vector2(401, 278)
+scale = Vector2(2, 2)
+
+[node name="DummyChest3" parent="." instance=ExtResource("5_kccvk")]
+position = Vector2(555, 136)
+scale = Vector2(2, 2)
