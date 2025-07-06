@@ -32,6 +32,14 @@ directories/dch_directory={
 "WAN": "res://dialog/WAN.dch"
 }
 directories/dtl_directory={
+"CG1Map2": "res://Assets/map2/CG1Map2.dtl",
+"GetAxe": "res://Assets/map2/GetAxe.dtl",
+"GetCarving": "res://Assets/map2/EndOfMap2.dtl",
+"IntroMap2": "res://Assets/map2/IntroMap2.dtl",
+"IntroMap2_2": "res://Assets/map2/IntroMap2_2.dtl",
+"IntroToPuzzle": "res://Assets/map2/IntroToPuzzle.dtl",
+"MonologHana": "res://Assets/map2/MonologHana.dtl",
+"TransBlack": "res://Assets/map2/TransBlack.dtl",
 "bucket1": "res://entity/puzzle/bucket1.dtl",
 "map03-01": "res://dialog/map03-01.dtl",
 "map03-02": "res://dialog/map03-02.dtl",
@@ -49,12 +57,13 @@ variables={
 "choice_text": "",
 "is_axe_taken": false,
 "is_carve_taken": false,
-"is_mutiara_dimakan": false,
 "is_saw_taken": false
 }
 layout/style_list=[]
 layout/default_style="Default"
+
 SpawnManager="*res://maps/map3/SpawnManager.cs"
+
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

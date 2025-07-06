@@ -1,0 +1,14 @@
+HANA: Ini Kapak?
+[signal arg="jalan"]
+[wait time="1.0"]
+[signal arg="stop"]
+HANA: Aku bisa merasakan Cahaya mawar itu di dalam batang pohon ini.
+Tebang pohon?
+- Ya
+	[signal arg="tebang"]
+	HANA: Itu dia, mawarnya.
+	[signal arg="ambil mawar"]
+	Hana mengambil mawarnya dan masuk ke dalam flashback
+	jump CG1Map2/
+- Tidak
+	jump 

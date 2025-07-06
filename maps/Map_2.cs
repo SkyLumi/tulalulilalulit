@@ -47,13 +47,13 @@ public partial class Map_2 : Node2D
 	private Node2D bridgeNode { get; set; }
 	private bool waitForText = false;
 	private string[] ClueText = [
-								"Clue Buat Box 1",
-								"Clue Buat Box 2",
-								"Clue Buat Box 3"
+								"Seorang penebang pohon sedang melakukan kerja sehari-harinya, menebang pohon. Pertama ia menebang pohon dengan Gergaji kemudian ia memotong pohon itu menjadi bagian-bagian agar lebih gampang dibawa dengan Kapak dan akhirnya dia mengupas kulit dari batang itu dengan Pisau Ukir.",
+								"Seorang penebang pohon sedang melakukan kerja sehari-harinya, menebang pohon. Pertama ia menebang pohon dengan Gergaji kemudian ia memotong pohon itu menjadi bagian-bagian agar lebih gampang dibawa dengan Kapak dan akhirnya dia mengupas kulit dari batang itu dengan Pisau Ukir.",
+								"Seorang penebang pohon sedang melakukan kerja sehari-harinya, menebang pohon. Pertama ia menebang pohon dengan Gergaji kemudian ia memotong pohon itu menjadi bagian-bagian agar lebih gampang dibawa dengan Kapak dan akhirnya dia mengupas kulit dari batang itu dengan Pisau Ukir."
 								];
 	// Use this Dictionary to point if the order of item in the boxes are correct
-	// Key or the correct order
-	private int[] CorrectOrderIndexItems = [2, 1, 0]; // SO the correct order are gergaji, pisau ukir, dan kapak
+	// Key or the correct order 
+	private int[] CorrectOrderIndexItems = [2, 0, 1]; // SO the correct order are gergaji, pisau ukir, dan kapak
 	// Data
 	private Dictionary<int, int> kIBucketvIItem = new Dictionary<int, int>(){ // Key is index of bucket and value is index of items
 																		{0, -1},
@@ -61,6 +61,12 @@ public partial class Map_2 : Node2D
 																		{2, -1}
 																		};
 	private bool IsFilled { get; set; }
+	private TileMapLayer Pohon { get; set; }
+	private TileMapLayer Bongol { get; set; }
+	private Node2D BridgeGetAxe { get; set; }
+	private Node2D BridgeEndMap2 { get; set; }
+	private bool Jalan = false;
+	private bool JalanY = false;
 	// End Region of Attribute
 
 	public override void _Ready()
@@ -87,21 +93,83 @@ public partial class Map_2 : Node2D
 				itemCondition = ItemConditions.NotTaken
 			}
 		];
+		Pohon = this.GetNode<TileMapLayer>("Pohon");
 		bridgeNode = this.GetNode<Node2D>("TextChoice");
+		Bongol = this.GetNode<TileMapLayer>("Bongol");
+		BridgeGetAxe = this.GetNode<Node2D>("BrideGetAxe");
+		Node2D introNode = this.GetNode<Node2D>("IntroMap2");
+		BridgeEndMap2 = this.GetNode<Node2D>("BrideEndMap2");
+		introNode.Connect("dialog_finished", new Callable(this, nameof(OnIntroFinished)));
+		JalanY = true;
+		introNode.Call("ShowDialog");
 		bridgeNode.Connect("dialog_finished", new Callable(this, nameof(OnDialogFinished)));
+		foreach (Item item in items)
+		{
+			GD.Print($"{item.itemObject.Name}");
+		}
+		GD.Print($"{_player.Position.Y}");
+	}
+	public void OnIntroFinished(string result)
+	{
+		if (result == "ended")
+		{
+			JalanY = false;
+		}
 	}
 
 	public override void _PhysicsProcess(double delta)
 	{
-		Node2D nearest = GetNearestBucket();
+		GetNearestBucket();
 		CollideItem();
+		if (Jalan)
+		{
+			_player.MoveLocalX(-1);
+		}
+		else if (JalanY)
+		{
+			if (_player.Position.Y > 320f)
+			{
+				_player.MoveLocalY(-0.4f);
+			}
+		}
 		// foreach (Item item in items)
 		// {
 		// 	GD.Print($"{item.itemObject.Name}, {item.itemCondition}");
 		// }
 	}
+	public void TakeAxe()
+	{
+		BridgeGetAxe.Connect("dialog_finished", new Callable(this, nameof(OnDialogAxeFinished)));
+		BridgeGetAxe.Call("ShowDialog");
+		// _player.GetNode<AnimatedSprite2D>("AnimatedSprite2D")
+	}
+	public void OnDialogAxeFinished(string result)
+	{
+		switch (result)
+		{
+			case "jalan":
+				Jalan = true;
+				break;
+			case "stop":
+				Jalan = false;
+				break;
+			case "tebang":
+				Pohon.Visible = false;
+				Bongol.Visible = true;
+				break;
+			case "ambil mawar":
 
-	private Node2D GetNearestBucket()
+				break;
+			case "ended":
+				items[1].itemObject.Visible = true;
+				// End free char
+				break;
+			default:
+				break;
+		}
+	}
+
+	private void GetNearestBucket()
 	{
 		float nearestDist = float.MaxValue;
 
@@ -125,7 +193,8 @@ public partial class Map_2 : Node2D
 			if (Input.IsActionPressed("ui_accept"))
 			{
 				// GD.Print($"Pressed at {Buckets[(int)indexAt].Name} with label {((Label)Labels[(int)indexAt]).Name}");
-				if (!waitForText){
+				if (!waitForText)
+				{
 					IndexBucket = (int)indexAt;
 					Bucket = Buckets[(int)indexAt].GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 					if (!Bucket.IsPlaying())
@@ -155,13 +224,9 @@ public partial class Map_2 : Node2D
 					}
 				}
 			}
-			return (Node2D)Buckets[(int)indexAt];
+			return;
 		}
-		else
-		{
-			return null;
-		}
-
+		return;
 	}
 	private void OnDialogFinished(string result)
 	{
@@ -224,9 +289,9 @@ public partial class Map_2 : Node2D
 			int index = 0;
 			foreach (KeyValuePair<int, int> keyVal in kIBucketvIItem)
 			{
-				GD.Print($"Bucket: {keyVal.Key}, item: {keyVal.Value}");
-				GD.Print($"Buckets Region");
-				GD.Print($"Bucket: {keyVal.Key}, item: {keyVal.Value}");
+				GD.Print($"Bucket: {keyVal.Key}, item: {keyVal.Value}.");
+				// GD.Print($"Buckets Region");
+				// GD.Print($"Bucket: {keyVal.Key}, item: {keyVal.Value}");
 				if (keyVal.Value != CorrectOrderIndexItems[index])
 				{
 					return;
@@ -234,7 +299,16 @@ public partial class Map_2 : Node2D
 				index++;
 			}
 			GD.Print("Kamu Menang");
-			GetTree().Quit(); // Rubah buat logic ke scene selanjutnya.
+			BridgeEndMap2.Connect("dialog_finished", new Callable(this, nameof(OnEndFinished)));
+			BridgeEndMap2.Call("ShowDialog");
+		}
+	}
+	private void OnEndFinished(string result)
+	{
+		if (result == "ended")
+		{
+			// Logic pindah scene
+			GetTree().Quit();
 		}
 	}
 	private void CollideItem()
@@ -244,7 +318,7 @@ public partial class Map_2 : Node2D
 		for (int i = 0; i < items.Count(); i++)
 		{
 			Item itemStruct = items[i];
-			if (itemStruct.itemCondition == ItemConditions.NotTaken)
+			if (itemStruct.itemCondition == ItemConditions.NotTaken && itemStruct.itemObject.Visible)
 			{
 				Node node = itemStruct.itemObject;
 				if (node is Node2D item)
@@ -253,11 +327,15 @@ public partial class Map_2 : Node2D
 
 					if (distance <= detectionRadius)
 					{
-						GD.Print($"Item dekat terdeteksi: {item.Name} (jarak: {distance})");
+						// GD.Print($"Item dekat terdeteksi: {item.Name} (jarak: {distance})");
 						items[i].itemCondition = ItemConditions.Taken;
 						isStored[i] = true;
 						item.Visible = false;
 						item.GetNode<StaticBody2D>("StaticBody2D").GetNode<CollisionShape2D>("CollisionShape2D").Disabled = true;
+						if (Pohon.Visible && i == 0)
+						{
+							TakeAxe();
+						}
 						// Contoh aksi: tampilkan info item, sorot, dll
 					}
 				}

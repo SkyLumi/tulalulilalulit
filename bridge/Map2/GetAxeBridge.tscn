@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv8bc1cuvp576"]
+
+[ext_resource type="Script" uid="uid://dw5i0e5f17ihm" path="res://bridge/Map2/get_axe_bridge.gd" id="1_hvyeg"]
+
+[node name="BrideGetAxe" type="Node2D"]
+script = ExtResource("1_hvyeg")
